@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import ReadData from "./components/ReadData";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="container">
+        <ReadData
+            title='Загрузка данных (DATA)'
+            url='http://localhost:7070/data'
+            opts=''
+        />
+        <ReadData
+            title='Загрузка данных (ERROR)'
+            url='http://localhost:7070/error'
+            opts=''
+        />
+        <ReadData
+            title='Загрузка данных (LOADING)'
+            url='http://localhost:7070/loading'
+            opts=''
+        />
     </div>
   );
 }
